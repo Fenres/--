@@ -130,3 +130,39 @@ background: linear-gradient(180deg, #b3e89c 0%, #9bcb82 63.5%);
     margin-left: 10px;
     color: var(--tekst);
 }
+
+.board {
+            display: flex;
+            gap: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .column {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            width: 300px;
+            min-height: 400px;
+        }
+
+          .column1 {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            width: 80%;
+            min-height: 400px;
+        }
+        .column h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            background-color: #f9f9f9;
+        }

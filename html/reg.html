@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Садовый Дворик</title>
+    <link rel="stylesheet" href="../css/stile.css">
+        <link rel="stylesheet" href="../css/stile_reg.css">
+     <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body>
+    <header class="header">
+        <!-- Верхний блок с логотипом и кнопкой входа -->
+        <div class="top-bar">
+            <div class="logo">
+                <img src="radish-icon.png" alt="Logo">
+                <span>Садовый Дворик</span>
+            </div> 
+            <nav class="nav">
+            <a href="#">Акции</a>
+            <a href="#">Каталоги</a>
+            <a href="#">О нас</a>
+            <a href="#">Контакты</a>
+            <a href="#">Условия работы</a>
+        </nav>
+            <div class="login">
+                <button>Вход / Регистрация</button>
+            </div>
+        </div>     
+
+        <!-- Нижний блок с поиском, понравившимися и корзиной -->
+        <div class="bottom-bar">
+            <div class="search">
+                <input type="text" placeholder="Поиск">
+                <button>🔍</button>
+            </div>
+            <div class="cart">
+                <span>Понравившиеся</span>
+                <span>0 Корзина</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <div class="login-container">
+        <h2>
+            <span class="tab" onclick="showSection('login')">Вход</span>
+            <span class="tab active" onclick="showSection('register')">Регистрация</span>
+        </h2>
+
+        <!-- Login Section -->
+        <div id="login" class="section hidden">
+            <input type="text" placeholder="E-mail / Телефон" ">
+            <input type="password" placeholder="Пароль" >
+            <button>Войти</button>
+        </div>
+
+        <!-- Register Section -->
+        <div id="register" class="section">
+            <input type="text" placeholder="Имя и фамилия" >
+            <input type="text" placeholder="E-mail" >
+            <input type="text" placeholder="Телефон" >
+            <input type="date" placeholder="Дата рождения" >
+            <div class="gender">
+                <label><input type="radio" name="gender" value="male" checked> Мужской</label>
+                <label><input type="radio" name="gender" value="female"> Женский</label>
+            </div>
+            <input type="password" placeholder="Пароль" >
+            <input type="password" placeholder="Подтвердите пароль">
+            <button>Регистрация</button>
+        </div>
+    </div>
+</main>
+    <script>
+        function showSection(section) {
+            const sections = document.getElementsByClassName('section');
+            const tabs = document.getElementsByClassName('tab');
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.add('hidden');
+                tabs[i].classList.remove('active');
+            }
+            document.getElementById(section).classList.remove('hidden');
+            document.querySelector(`[onclick="showSection('${section}')`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
